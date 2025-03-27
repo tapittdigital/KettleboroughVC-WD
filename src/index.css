@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --muted: 210 40% 96.1%;
+    --border: 214.3 31.8% 91.4%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Pastel card colors */
+  .card-light-1 { background-color: #FCE8E6; } /* Soft Peach */
+  .card-light-2 { background-color: #E3F2FD; } /* Light Blue */
+  .card-light-3 { background-color: #F3E5F5; } /* Lavender */
+  .card-light-4 { background-color: #E8F5E9; } /* Light Green */
+  .card-light-5 { background-color: #FFF3E0; } /* Light Orange */
+  .card-light-6 { background-color: #F1F8E9; } /* Mint Green */
+  .card-light-7 { background-color: #EDE7F6; } /* Soft Purple */
+  .card-light-8 { background-color: #FFEBEE; } /* Blush Pink */
+
+  /* Other reusable components */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg backdrop-filter border border-white/20 rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-black text-white rounded-full transition-all duration-300 ease-out-expo hover:bg-gray-900 active:scale-95;
+  }
+
+  .content-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .perspective {
+    perspective: 1000px;
+  }
+}
