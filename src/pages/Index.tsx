@@ -82,7 +82,7 @@ const Index: React.FC = () => {
       {showScroll && (
         <button
           onClick={handleScrollToTop}
-          className="fixed bottom-10 right-10 p-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-900 transition-all"
+          className="fixed bottom-10 right-10 p-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-900 transition-all z-[9999]"
         >
           <ArrowUp size={28} />
         </button>
